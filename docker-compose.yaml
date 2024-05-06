@@ -26,13 +26,13 @@ services:
       context: .
       dockerfile: Dockerfile
       args:
-        NEXT_PUBLIC_WEBAPP_URL: ${NEXT_PUBLIC_WEBAPP_URL}
+        NEXT_PUBLIC_WEBAPP_URL: https://calendar.fluxosmm.com
         NEXT_PUBLIC_LICENSE_CONSENT: ${NEXT_PUBLIC_LICENSE_CONSENT}
         CALCOM_TELEMETRY_DISABLED: ${CALCOM_TELEMETRY_DISABLED}
-        NEXTAUTH_SECRET: ${NEXTAUTH_SECRET}
-        CALENDSO_ENCRYPTION_KEY: ${CALENDSO_ENCRYPTION_KEY}
-        DATABASE_URL: ${DATABASE_URL}
-        DATABASE_DIRECT_URL: ${DATABASE_URL}
+        NEXTAUTH_SECRET: tdh1tblayy6kw0q7vbf3365bj7y354ik
+        CALENDSO_ENCRYPTION_KEY: dms1ix8en2bipklkdyt9lgncv38fhj1e
+        DATABASE_URL: postgresql://clvref07z0dkgaup756no9w9z:SUzxgCMzKmk4DCMqHM1oeJRe@clvref08301afp7aur68c6jyg:5432/clvref0800dkiaup7bl7s5mtd
+        DATABASE_DIRECT_URL: postgresql://clvref07z0dkgaup756no9w9z:SUzxgCMzKmk4DCMqHM1oeJRe@clvref08301afp7aur68c6jyg:5432/clvref0800dkiaup7bl7s5mtd
       network: stack
     restart: always
     networks:
@@ -41,8 +41,8 @@ services:
       - 3000:3000
     env_file: .env
     environment:
-      - DATABASE_URL=postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@${DATABASE_HOST}/${POSTGRES_DB}
-      - DATABASE_DIRECT_URL=${DATABASE_URL}
+      - DATABASE_URL=postgresql://clvref07z0dkgaup756no9w9z:SUzxgCMzKmk4DCMqHM1oeJRe@clvref08301afp7aur68c6jyg:5432/clvref0800dkiaup7bl7s5mtd
+      - DATABASE_DIRECT_URL=postgresql://clvref07z0dkgaup756no9w9z:SUzxgCMzKmk4DCMqHM1oeJRe@clvref08301afp7aur68c6jyg:5432/clvref0800dkiaup7bl7s5mtd
     depends_on:
       - database
 
