@@ -42,7 +42,7 @@ services:
     env_file: .env
     environment:
       - DATABASE_URL=postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@${DATABASE_HOST}/${POSTGRES_DB}
-      - DATABASE_DIRECT_URL=postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@${DATABASE_HOST}/${POSTGRES_DB}
+      - DATABASE_DIRECT_URL=${DATABASE_URL}
     depends_on:
       - database
 
