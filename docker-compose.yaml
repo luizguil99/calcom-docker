@@ -9,15 +9,7 @@ networks:
     external: false
 
 services:
-  database:
-    container_name: database
-    image: postgres
-    restart: always
-    volumes:
-      - database-data:/var/lib/postgresql/data/
-    env_file: .env
-    networks:
-      - stack
+ 
 
   calcom:
     image: calcom/cal.com:v3.9.1
