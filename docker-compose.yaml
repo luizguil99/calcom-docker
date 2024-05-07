@@ -20,7 +20,7 @@ services:
       - stack
 
   calcom:
-    image: calcom/cal.com:latest
+    image: calcom/cal.com:v3.9.1
     restart: always
     ports:
       - 8594:3000
